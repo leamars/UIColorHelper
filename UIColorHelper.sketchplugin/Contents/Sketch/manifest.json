@@ -1,0 +1,24 @@
+{
+  "author" : "Lea Marolt Sonnenschein",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "shortcut" : "ctrl u",
+      "name" : "UIColorFormat",
+      "handler" : "onRun",
+      "identifier" : "com.hellosunschein.UIColorFormat"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "com.hellosunschein.UIColorFormat"
+    ],
+    "title" : "UIColorFormat",
+    "isRoot" : true,
+  },
+  "identifier" : "com.hellosunschein.UIColorFormat",
+  "version" : "1.0",
+  "description" : "Copies fill color to UIColor format to the clipboard.",
+  "authorEmail" : "leyamars@gmail.com",
+  "name" : "UIColorFormat"
+}

@@ -1,0 +1,26 @@
+var onRun = function(context) {
+
+// grab the selected layers + selected layers count
+var selectedLayers = context.selection;
+var selectedCount = selectedLayers.count();
+
+// if the count == 1, aka we know have a fill color we want to copy, we proceed
+if (selectedCount == 1) {
+
+    // grab the fill color
+    var fill = context.selection[0].style().fills().firstObject().colorGeneric();
+
+    // format the text to Swift UIColor format
+    var colorText = 'UIColor(red: ' + fill.red() + ', green: ' + fill.green() + ', blue: ' + fill.blue() + ', alpha: ' + fill.alpha() + ')';
+
+    // grab the pasteboard
+    var pasteBoard = NSPasteboard.generalPasteboard();
+
+    // clean it
+    pasteBoard.clearContents();
+
+    // put the UIColor() format on the clipboard
+    pasteBoard.setString_forType(colorText, NSPasteboardTypeString);
+};
+
+};
